@@ -46,4 +46,10 @@ class JobController extends Controller
             return $this->sendError('NotFound.', ['error'=>'Result not found']);
         }
     }
+
+    public function jobDetails($id)
+    {
+        $result = Vacancy::where("id",$id)->first();
+        return $this->sendResponse($result, 'Success');
+    }
 }

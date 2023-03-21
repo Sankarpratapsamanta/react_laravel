@@ -30,6 +30,8 @@ Route::middleware('auth:api')->group( function () {
     Route::get('job-list', [JobController::class, 'listing']);
     Route::get('search', [JobController::class, 'search']);
     Route::get('sorting', [JobController::class, 'jobSorting']);
+    Route::get('job/{id}', [JobController::class, 'jobDetails']);
+
 
 
 });

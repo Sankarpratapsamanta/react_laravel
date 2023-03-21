@@ -9532,21 +9532,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/dist/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/dist/index.js");
 /* harmony import */ var _pages_Auth_Login__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pages/Auth/Login */ "./resources/js/pages/Auth/Login.jsx");
 /* harmony import */ var _pages_Auth_Signup__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/Auth/Signup */ "./resources/js/pages/Auth/Signup.jsx");
 /* harmony import */ var _pages_Dashboard_Home__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pages/Dashboard/Home */ "./resources/js/pages/Dashboard/Home.jsx");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _helpers_AuthContext__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./helpers/AuthContext */ "./resources/js/helpers/AuthContext.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _pages_JobDetails_Details__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pages/JobDetails/Details */ "./resources/js/pages/JobDetails/Details.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
 function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i["return"] && (_r = _i["return"](), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
@@ -9585,1539 +9587,42 @@ function App() {
       });
     }
   };
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.BrowserRouter, {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_helpers_AuthContext__WEBPACK_IMPORTED_MODULE_6__.AuthContext.Provider, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.BrowserRouter, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_helpers_AuthContext__WEBPACK_IMPORTED_MODULE_6__.AuthContext.Provider, {
       value: {
         currentUser: currentUser,
         setCurrentUser: setCurrentUser
       },
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Routes, {
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Routes, {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Route, {
           path: "/",
-          element: !currentUser ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_pages_Auth_Login__WEBPACK_IMPORTED_MODULE_2__["default"], {}) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Navigate, {
+          element: !currentUser ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_pages_Auth_Login__WEBPACK_IMPORTED_MODULE_2__["default"], {}) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Navigate, {
             to: "/home"
           }),
           exact: true
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Route, {
           path: "/sign-up",
-          element: !currentUser ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_pages_Auth_Signup__WEBPACK_IMPORTED_MODULE_3__["default"], {}) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Navigate, {
+          element: !currentUser ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_pages_Auth_Signup__WEBPACK_IMPORTED_MODULE_3__["default"], {}) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Navigate, {
             to: "/home"
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Route, {
           path: "/home",
-          element: !currentUser ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Navigate, {
+          element: !currentUser ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Navigate, {
             to: "/"
-          }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_pages_Dashboard_Home__WEBPACK_IMPORTED_MODULE_4__["default"], {})
+          }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_pages_Dashboard_Home__WEBPACK_IMPORTED_MODULE_4__["default"], {})
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Route, {
+          path: "/job/:id",
+          element: !currentUser ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Navigate, {
+            to: "/"
+          }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_pages_JobDetails_Details__WEBPACK_IMPORTED_MODULE_7__["default"], {})
         })]
       })
     })
-  })
-  // <section class="inner-section ad-list-part">
-  //     <div class="container">
-  //         <div class="row content-reverse">
-  //             <div class="col-lg-4 col-xl-3">
-  //                 <div class="row">
-  //                     <div class="col-md-6 col-lg-12">
-  //                         <div class="product-widget">
-  //                             <h6 class="product-widget-title">
-  //                                 Filter by Price
-  //                             </h6>
-  //                             <form class="product-widget-form">
-  //                                 <div class="product-widget-group">
-  //                                     <input
-  //                                         type="text"
-  //                                         placeholder="min - 00"
-  //                                     />
-  //                                     <input
-  //                                         type="text"
-  //                                         placeholder="max - 1B"
-  //                                     />
-  //                                 </div>
-  //                                 <button
-  //                                     type="submit"
-  //                                     class="product-widget-btn"
-  //                                 >
-  //                                     <i class="fas fa-search"></i>
-  //                                     <span>search</span>
-  //                                 </button>
-  //                             </form>
-  //                         </div>
-  //                     </div>
-
-  //                     <div class="col-md-6 col-lg-12">
-  //                         <div class="product-widget">
-  //                             <h6 class="product-widget-title">
-  //                                 Filter by cities
-  //                             </h6>
-  //                             <form class="product-widget-form">
-  //                                 <div class="product-widget-search">
-  //                                     <input
-  //                                         type="text"
-  //                                         placeholder="Search"
-  //                                     />
-  //                                 </div>
-  //                                 <ul class="product-widget-list product-widget-scroll">
-  //                                     <li class="product-widget-item">
-  //                                         <div class="product-widget-checkbox">
-  //                                             <input
-  //                                                 type="checkbox"
-  //                                                 id="chcek9"
-  //                                             />
-  //                                         </div>
-  //                                         <label
-  //                                             class="product-widget-label"
-  //                                             for="chcek9"
-  //                                         >
-  //                                             <span class="product-widget-text">
-  //                                                 Los Angeles
-  //                                             </span>
-  //                                             <span class="product-widget-number">
-  //                                                 (95)
-  //                                             </span>
-  //                                         </label>
-  //                                     </li>
-  //                                     <li class="product-widget-item">
-  //                                         <div class="product-widget-checkbox">
-  //                                             <input
-  //                                                 type="checkbox"
-  //                                                 id="chcek10"
-  //                                             />
-  //                                         </div>
-  //                                         <label
-  //                                             class="product-widget-label"
-  //                                             for="chcek10"
-  //                                         >
-  //                                             <span class="product-widget-text">
-  //                                                 San Francisco
-  //                                             </span>
-  //                                             <span class="product-widget-number">
-  //                                                 (82)
-  //                                             </span>
-  //                                         </label>
-  //                                     </li>
-  //                                     <li class="product-widget-item">
-  //                                         <div class="product-widget-checkbox">
-  //                                             <input
-  //                                                 type="checkbox"
-  //                                                 id="chcek11"
-  //                                             />
-  //                                         </div>
-  //                                         <label
-  //                                             class="product-widget-label"
-  //                                             for="chcek11"
-  //                                         >
-  //                                             <span class="product-widget-text">
-  //                                                 California
-  //                                             </span>
-  //                                             <span class="product-widget-number">
-  //                                                 (1t)
-  //                                             </span>
-  //                                         </label>
-  //                                     </li>
-  //                                     <li class="product-widget-item">
-  //                                         <div class="product-widget-checkbox">
-  //                                             <input
-  //                                                 type="checkbox"
-  //                                                 id="chcek12"
-  //                                             />
-  //                                         </div>
-  //                                         <label
-  //                                             class="product-widget-label"
-  //                                             for="chcek12"
-  //                                         >
-  //                                             <span class="product-widget-text">
-  //                                                 Manhattan
-  //                                             </span>
-  //                                             <span class="product-widget-number">
-  //                                                 (46)
-  //                                             </span>
-  //                                         </label>
-  //                                     </li>
-  //                                     <li class="product-widget-item">
-  //                                         <div class="product-widget-checkbox">
-  //                                             <input
-  //                                                 type="checkbox"
-  //                                                 id="chcek13"
-  //                                             />
-  //                                         </div>
-  //                                         <label
-  //                                             class="product-widget-label"
-  //                                             for="chcek13"
-  //                                         >
-  //                                             <span class="product-widget-text">
-  //                                                 Baltimore
-  //                                             </span>
-  //                                             <span class="product-widget-number">
-  //                                                 (24)
-  //                                             </span>
-  //                                         </label>
-  //                                     </li>
-  //                                     <li class="product-widget-item">
-  //                                         <div class="product-widget-checkbox">
-  //                                             <input
-  //                                                 type="checkbox"
-  //                                                 id="chcek14"
-  //                                             />
-  //                                         </div>
-  //                                         <label
-  //                                             class="product-widget-label"
-  //                                             for="chcek14"
-  //                                         >
-  //                                             <span class="product-widget-text">
-  //                                                 Avocados
-  //                                             </span>
-  //                                             <span class="product-widget-number">
-  //                                                 (34)
-  //                                             </span>
-  //                                         </label>
-  //                                     </li>
-  //                                     <li class="product-widget-item">
-  //                                         <div class="product-widget-checkbox">
-  //                                             <input
-  //                                                 type="checkbox"
-  //                                                 id="chcek15"
-  //                                             />
-  //                                         </div>
-  //                                         <label
-  //                                             class="product-widget-label"
-  //                                             for="chcek15"
-  //                                         >
-  //                                             <span class="product-widget-text">
-  //                                                 new york
-  //                                             </span>
-  //                                             <span class="product-widget-number">
-  //                                                 (82)
-  //                                             </span>
-  //                                         </label>
-  //                                     </li>
-  //                                     <li class="product-widget-item">
-  //                                         <div class="product-widget-checkbox">
-  //                                             <input
-  //                                                 type="checkbox"
-  //                                                 id="chcek16"
-  //                                             />
-  //                                         </div>
-  //                                         <label
-  //                                             class="product-widget-label"
-  //                                             for="chcek16"
-  //                                         >
-  //                                             <span class="product-widget-text">
-  //                                                 Houston
-  //                                             </span>
-  //                                             <span class="product-widget-number">
-  //                                                 (45)
-  //                                             </span>
-  //                                         </label>
-  //                                     </li>
-  //                                     <li class="product-widget-item">
-  //                                         <div class="product-widget-checkbox">
-  //                                             <input
-  //                                                 type="checkbox"
-  //                                                 id="chcek17"
-  //                                             />
-  //                                         </div>
-  //                                         <label
-  //                                             class="product-widget-label"
-  //                                             for="chcek17"
-  //                                         >
-  //                                             <span class="product-widget-text">
-  //                                                 Chicago
-  //                                             </span>
-  //                                             <span class="product-widget-number">
-  //                                                 (19)
-  //                                             </span>
-  //                                         </label>
-  //                                     </li>
-  //                                 </ul>
-  //                                 <button
-  //                                     type="submit"
-  //                                     class="product-widget-btn"
-  //                                 >
-  //                                     <i class="fas fa-broom"></i>
-  //                                     <span>Clear Filter</span>
-  //                                 </button>
-  //                             </form>
-  //                         </div>
-  //                     </div>
-
-  //                 </div>
-  //             </div>
-  //             <div class="col-lg-8 col-xl-9">
-  //                 <div class="row">
-  //                     <div class="col-lg-12">
-  //                         <div class="header-filter">
-  //                             <div class="filter-short">
-  //                                 <label class="filter-label">
-  //                                     Short by :
-  //                                 </label>
-  //                                 <select class="custom-select filter-select">
-  //                                     <option selected="">default</option>
-  //                                     <option value="3">trending</option>
-  //                                     <option value="1">featured</option>
-  //                                     <option value="2">recommend</option>
-  //                                 </select>
-  //                             </div>
-
-  //                         </div>
-  //                     </div>
-  //                 </div>
-  //                 <div class="row">
-  //                     <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
-  //                         <div class="product-card">
-  //                             <div class="product-media">
-  //                                 <div class="product-img">
-  //                                     <img
-  //                                         src="images/product/07.jpg"
-  //                                         alt="product"
-  //                                     />
-  //                                 </div>
-  //                                 <div class="product-type">
-  //                                     <span class="flat-badge booking">
-  //                                         booking
-  //                                     </span>
-  //                                 </div>
-  //                                 <ul class="product-action">
-  //                                     <li class="view">
-  //                                         <i class="fas fa-eye"></i>
-  //                                         <span>264</span>
-  //                                     </li>
-  //                                     <li class="click">
-  //                                         <i class="fas fa-mouse"></i>
-  //                                         <span>134</span>
-  //                                     </li>
-  //                                     <li class="rating">
-  //                                         <i class="fas fa-star"></i>
-  //                                         <span>4.5/7</span>
-  //                                     </li>
-  //                                 </ul>
-  //                             </div>
-  //                             <div class="product-content">
-  //                                 <ol class="breadcrumb product-category">
-  //                                     <li>
-  //                                         <i class="fas fa-tags"></i>
-  //                                     </li>
-  //                                     <li class="breadcrumb-item">
-  //                                         <a href="#">Luxury</a>
-  //                                     </li>
-  //                                     <li
-  //                                         class="breadcrumb-item active"
-  //                                         aria-current="page"
-  //                                     >
-  //                                         resort
-  //                                     </li>
-  //                                 </ol>
-  //                                 <h5 class="product-title">
-  //                                     <a href="ad-details-left.html">
-  //                                         Lorem ipsum dolor sit amet
-  //                                         consect adipisicing elit
-  //                                     </a>
-  //                                 </h5>
-  //                                 <div class="product-meta">
-  //                                     <span>
-  //                                         <i class="fas fa-map-marker-alt"></i>
-  //                                         Uttara, Dhaka
-  //                                     </span>
-  //                                     <span>
-  //                                         <i class="fas fa-clock"></i>30
-  //                                         min ago
-  //                                     </span>
-  //                                 </div>
-  //                                 <div class="product-info">
-  //                                     <h5 class="product-price">
-  //                                         $1590<span>/per week</span>
-  //                                     </h5>
-  //                                     <div class="product-btn">
-  //                                         <a
-  //                                             href="compare.html"
-  //                                             title="Compare"
-  //                                             class="fas fa-compress"
-  //                                         ></a>
-  //                                         <button
-  //                                             type="button"
-  //                                             title="Wishlist"
-  //                                             class="far fa-heart"
-  //                                         ></button>
-  //                                     </div>
-  //                                 </div>
-  //                             </div>
-  //                         </div>
-  //                     </div>
-  //                     <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
-  //                         <div class="product-card">
-  //                             <div class="product-media">
-  //                                 <div class="product-img">
-  //                                     <img
-  //                                         src="images/product/08.jpg"
-  //                                         alt="product"
-  //                                     />
-  //                                 </div>
-  //                                 <div class="product-type">
-  //                                     <span class="flat-badge sale">
-  //                                         sale
-  //                                     </span>
-  //                                 </div>
-  //                                 <ul class="product-action">
-  //                                     <li class="view">
-  //                                         <i class="fas fa-eye"></i>
-  //                                         <span>264</span>
-  //                                     </li>
-  //                                     <li class="click">
-  //                                         <i class="fas fa-mouse"></i>
-  //                                         <span>134</span>
-  //                                     </li>
-  //                                     <li class="rating">
-  //                                         <i class="fas fa-star"></i>
-  //                                         <span>4.5/7</span>
-  //                                     </li>
-  //                                 </ul>
-  //                             </div>
-  //                             <div class="product-content">
-  //                                 <ol class="breadcrumb product-category">
-  //                                     <li>
-  //                                         <i class="fas fa-tags"></i>
-  //                                     </li>
-  //                                     <li class="breadcrumb-item">
-  //                                         <a href="#">gadget</a>
-  //                                     </li>
-  //                                     <li
-  //                                         class="breadcrumb-item active"
-  //                                         aria-current="page"
-  //                                     >
-  //                                         mobile
-  //                                     </li>
-  //                                 </ol>
-  //                                 <h5 class="product-title">
-  //                                     <a href="ad-details-left.html">
-  //                                         Lorem ipsum dolor sit amet
-  //                                         consect adipisicing elit
-  //                                     </a>
-  //                                 </h5>
-  //                                 <div class="product-meta">
-  //                                     <span>
-  //                                         <i class="fas fa-map-marker-alt"></i>
-  //                                         Uttara, Dhaka
-  //                                     </span>
-  //                                     <span>
-  //                                         <i class="fas fa-clock"></i>30
-  //                                         min ago
-  //                                     </span>
-  //                                 </div>
-  //                                 <div class="product-info">
-  //                                     <h5 class="product-price">
-  //                                         $454<span>/fixed</span>
-  //                                     </h5>
-  //                                     <div class="product-btn">
-  //                                         <a
-  //                                             href="compare.html"
-  //                                             title="Compare"
-  //                                             class="fas fa-compress"
-  //                                         ></a>
-  //                                         <button
-  //                                             type="button"
-  //                                             title="Wishlist"
-  //                                             class="far fa-heart"
-  //                                         ></button>
-  //                                     </div>
-  //                                 </div>
-  //                             </div>
-  //                         </div>
-  //                     </div>
-  //                     <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
-  //                         <div class="product-card">
-  //                             <div class="product-media">
-  //                                 <div class="product-img">
-  //                                     <img
-  //                                         src="images/product/09.jpg"
-  //                                         alt="product"
-  //                                     />
-  //                                 </div>
-  //                                 <div class="product-type">
-  //                                     <span class="flat-badge sale">
-  //                                         sale
-  //                                     </span>
-  //                                 </div>
-  //                                 <ul class="product-action">
-  //                                     <li class="view">
-  //                                         <i class="fas fa-eye"></i>
-  //                                         <span>264</span>
-  //                                     </li>
-  //                                     <li class="click">
-  //                                         <i class="fas fa-mouse"></i>
-  //                                         <span>134</span>
-  //                                     </li>
-  //                                     <li class="rating">
-  //                                         <i class="fas fa-star"></i>
-  //                                         <span>4.5/7</span>
-  //                                     </li>
-  //                                 </ul>
-  //                             </div>
-  //                             <div class="product-content">
-  //                                 <ol class="breadcrumb product-category">
-  //                                     <li>
-  //                                         <i class="fas fa-tags"></i>
-  //                                     </li>
-  //                                     <li class="breadcrumb-item">
-  //                                         <a href="#">animal</a>
-  //                                     </li>
-  //                                     <li
-  //                                         class="breadcrumb-item active"
-  //                                         aria-current="page"
-  //                                     >
-  //                                         cat
-  //                                     </li>
-  //                                 </ol>
-  //                                 <h5 class="product-title">
-  //                                     <a href="ad-details-left.html">
-  //                                         Lorem ipsum dolor sit amet
-  //                                         consect adipisicing elit
-  //                                     </a>
-  //                                 </h5>
-  //                                 <div class="product-meta">
-  //                                     <span>
-  //                                         <i class="fas fa-map-marker-alt"></i>
-  //                                         Uttara, Dhaka
-  //                                     </span>
-  //                                     <span>
-  //                                         <i class="fas fa-clock"></i>30
-  //                                         min ago
-  //                                     </span>
-  //                                 </div>
-  //                                 <div class="product-info">
-  //                                     <h5 class="product-price">
-  //                                         $235<span>/Negotiable</span>
-  //                                     </h5>
-  //                                     <div class="product-btn">
-  //                                         <a
-  //                                             href="compare.html"
-  //                                             title="Compare"
-  //                                             class="fas fa-compress"
-  //                                         ></a>
-  //                                         <button
-  //                                             type="button"
-  //                                             title="Wishlist"
-  //                                             class="far fa-heart"
-  //                                         ></button>
-  //                                     </div>
-  //                                 </div>
-  //                             </div>
-  //                         </div>
-  //                     </div>
-  //                     <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
-  //                         <div class="product-card">
-  //                             <div class="product-media">
-  //                                 <div class="product-img">
-  //                                     <img
-  //                                         src="images/product/10.jpg"
-  //                                         alt="product"
-  //                                     />
-  //                                 </div>
-  //                                 <div class="product-type">
-  //                                     <span class="flat-badge rent">
-  //                                         rent
-  //                                     </span>
-  //                                 </div>
-  //                                 <ul class="product-action">
-  //                                     <li class="view">
-  //                                         <i class="fas fa-eye"></i>
-  //                                         <span>264</span>
-  //                                     </li>
-  //                                     <li class="click">
-  //                                         <i class="fas fa-mouse"></i>
-  //                                         <span>134</span>
-  //                                     </li>
-  //                                     <li class="rating">
-  //                                         <i class="fas fa-star"></i>
-  //                                         <span>4.5/7</span>
-  //                                     </li>
-  //                                 </ul>
-  //                             </div>
-  //                             <div class="product-content">
-  //                                 <ol class="breadcrumb product-category">
-  //                                     <li>
-  //                                         <i class="fas fa-tags"></i>
-  //                                     </li>
-  //                                     <li class="breadcrumb-item">
-  //                                         <a href="#">automobile</a>
-  //                                     </li>
-  //                                     <li
-  //                                         class="breadcrumb-item active"
-  //                                         aria-current="page"
-  //                                     >
-  //                                         private car
-  //                                     </li>
-  //                                 </ol>
-  //                                 <h5 class="product-title">
-  //                                     <a href="ad-details-left.html">
-  //                                         Lorem ipsum dolor sit amet
-  //                                         consect adipisicing elit
-  //                                     </a>
-  //                                 </h5>
-  //                                 <div class="product-meta">
-  //                                     <span>
-  //                                         <i class="fas fa-map-marker-alt"></i>
-  //                                         Uttara, Dhaka
-  //                                     </span>
-  //                                     <span>
-  //                                         <i class="fas fa-clock"></i>30
-  //                                         min ago
-  //                                     </span>
-  //                                 </div>
-  //                                 <div class="product-info">
-  //                                     <h5 class="product-price">
-  //                                         $768<span>/per month</span>
-  //                                     </h5>
-  //                                     <div class="product-btn">
-  //                                         <a
-  //                                             href="compare.html"
-  //                                             title="Compare"
-  //                                             class="fas fa-compress"
-  //                                         ></a>
-  //                                         <button
-  //                                             type="button"
-  //                                             title="Wishlist"
-  //                                             class="far fa-heart"
-  //                                         ></button>
-  //                                     </div>
-  //                                 </div>
-  //                             </div>
-  //                         </div>
-  //                     </div>
-  //                     <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
-  //                         <div class="product-card">
-  //                             <div class="product-media">
-  //                                 <div class="product-img">
-  //                                     <img
-  //                                         src="images/product/11.jpg"
-  //                                         alt="product"
-  //                                     />
-  //                                 </div>
-  //                                 <div class="product-type">
-  //                                     <span class="flat-badge booking">
-  //                                         booking
-  //                                     </span>
-  //                                 </div>
-  //                                 <ul class="product-action">
-  //                                     <li class="view">
-  //                                         <i class="fas fa-eye"></i>
-  //                                         <span>264</span>
-  //                                     </li>
-  //                                     <li class="click">
-  //                                         <i class="fas fa-mouse"></i>
-  //                                         <span>134</span>
-  //                                     </li>
-  //                                     <li class="rating">
-  //                                         <i class="fas fa-star"></i>
-  //                                         <span>4.5/7</span>
-  //                                     </li>
-  //                                 </ul>
-  //                             </div>
-  //                             <div class="product-content">
-  //                                 <ol class="breadcrumb product-category">
-  //                                     <li>
-  //                                         <i class="fas fa-tags"></i>
-  //                                     </li>
-  //                                     <li class="breadcrumb-item">
-  //                                         <a href="#">Luxury</a>
-  //                                     </li>
-  //                                     <li
-  //                                         class="breadcrumb-item active"
-  //                                         aria-current="page"
-  //                                     >
-  //                                         Duplex house
-  //                                     </li>
-  //                                 </ol>
-  //                                 <h5 class="product-title">
-  //                                     <a href="ad-details-left.html">
-  //                                         Lorem ipsum dolor sit amet
-  //                                         consect adipisicing elit
-  //                                     </a>
-  //                                 </h5>
-  //                                 <div class="product-meta">
-  //                                     <span>
-  //                                         <i class="fas fa-map-marker-alt"></i>
-  //                                         Uttara, Dhaka
-  //                                     </span>
-  //                                     <span>
-  //                                         <i class="fas fa-clock"></i>30
-  //                                         min ago
-  //                                     </span>
-  //                                 </div>
-  //                                 <div class="product-info">
-  //                                     <h5 class="product-price">
-  //                                         $1470<span>/per day</span>
-  //                                     </h5>
-  //                                     <div class="product-btn">
-  //                                         <a
-  //                                             href="compare.html"
-  //                                             title="Compare"
-  //                                             class="fas fa-compress"
-  //                                         ></a>
-  //                                         <button
-  //                                             type="button"
-  //                                             title="Wishlist"
-  //                                             class="far fa-heart"
-  //                                         ></button>
-  //                                     </div>
-  //                                 </div>
-  //                             </div>
-  //                         </div>
-  //                     </div>
-  //                     <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
-  //                         <div class="product-card">
-  //                             <div class="product-media">
-  //                                 <div class="product-img">
-  //                                     <img
-  //                                         src="images/product/13.jpg"
-  //                                         alt="product"
-  //                                     />
-  //                                 </div>
-  //                                 <div class="product-type">
-  //                                     <span class="flat-badge sale">
-  //                                         sale
-  //                                     </span>
-  //                                 </div>
-  //                                 <ul class="product-action">
-  //                                     <li class="view">
-  //                                         <i class="fas fa-eye"></i>
-  //                                         <span>264</span>
-  //                                     </li>
-  //                                     <li class="click">
-  //                                         <i class="fas fa-mouse"></i>
-  //                                         <span>134</span>
-  //                                     </li>
-  //                                     <li class="rating">
-  //                                         <i class="fas fa-star"></i>
-  //                                         <span>4.5/7</span>
-  //                                     </li>
-  //                                 </ul>
-  //                             </div>
-  //                             <div class="product-content">
-  //                                 <ol class="breadcrumb product-category">
-  //                                     <li>
-  //                                         <i class="fas fa-tags"></i>
-  //                                     </li>
-  //                                     <li class="breadcrumb-item">
-  //                                         <a href="#">electronics</a>
-  //                                     </li>
-  //                                     <li
-  //                                         class="breadcrumb-item active"
-  //                                         aria-current="page"
-  //                                     >
-  //                                         laptop
-  //                                     </li>
-  //                                 </ol>
-  //                                 <h5 class="product-title">
-  //                                     <a href="ad-details-left.html">
-  //                                         Lorem ipsum dolor sit amet
-  //                                         consect adipisicing elit
-  //                                     </a>
-  //                                 </h5>
-  //                                 <div class="product-meta">
-  //                                     <span>
-  //                                         <i class="fas fa-map-marker-alt"></i>
-  //                                         Uttara, Dhaka
-  //                                     </span>
-  //                                     <span>
-  //                                         <i class="fas fa-clock"></i>30
-  //                                         min ago
-  //                                     </span>
-  //                                 </div>
-  //                                 <div class="product-info">
-  //                                     <h5 class="product-price">
-  //                                         $1550<span>/fixed</span>
-  //                                     </h5>
-  //                                     <div class="product-btn">
-  //                                         <a
-  //                                             href="compare.html"
-  //                                             title="Compare"
-  //                                             class="fas fa-compress"
-  //                                         ></a>
-  //                                         <button
-  //                                             type="button"
-  //                                             title="Wishlist"
-  //                                             class="far fa-heart"
-  //                                         ></button>
-  //                                     </div>
-  //                                 </div>
-  //                             </div>
-  //                         </div>
-  //                     </div>
-  //                     <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
-  //                         <div class="product-card">
-  //                             <div class="product-media">
-  //                                 <div class="product-img">
-  //                                     <img
-  //                                         src="images/product/14.jpg"
-  //                                         alt="product"
-  //                                     />
-  //                                 </div>
-  //                                 <div class="product-type">
-  //                                     <span class="flat-badge rent">
-  //                                         rent
-  //                                     </span>
-  //                                 </div>
-  //                                 <ul class="product-action">
-  //                                     <li class="view">
-  //                                         <i class="fas fa-eye"></i>
-  //                                         <span>264</span>
-  //                                     </li>
-  //                                     <li class="click">
-  //                                         <i class="fas fa-mouse"></i>
-  //                                         <span>134</span>
-  //                                     </li>
-  //                                     <li class="rating">
-  //                                         <i class="fas fa-star"></i>
-  //                                         <span>4.5/7</span>
-  //                                     </li>
-  //                                 </ul>
-  //                             </div>
-  //                             <div class="product-content">
-  //                                 <ol class="breadcrumb product-category">
-  //                                     <li>
-  //                                         <i class="fas fa-tags"></i>
-  //                                     </li>
-  //                                     <li class="breadcrumb-item">
-  //                                         <a href="#">automobile</a>
-  //                                     </li>
-  //                                     <li
-  //                                         class="breadcrumb-item active"
-  //                                         aria-current="page"
-  //                                     >
-  //                                         bike
-  //                                     </li>
-  //                                 </ol>
-  //                                 <h5 class="product-title">
-  //                                     <a href="ad-details-left.html">
-  //                                         Lorem ipsum dolor sit amet
-  //                                         consect adipisicing elit
-  //                                     </a>
-  //                                 </h5>
-  //                                 <div class="product-meta">
-  //                                     <span>
-  //                                         <i class="fas fa-map-marker-alt"></i>
-  //                                         Uttara, Dhaka
-  //                                     </span>
-  //                                     <span>
-  //                                         <i class="fas fa-clock"></i>30
-  //                                         min ago
-  //                                     </span>
-  //                                 </div>
-  //                                 <div class="product-info">
-  //                                     <h5 class="product-price">
-  //                                         $90<span>/per hour</span>
-  //                                     </h5>
-  //                                     <div class="product-btn">
-  //                                         <a
-  //                                             href="compare.html"
-  //                                             title="Compare"
-  //                                             class="fas fa-compress"
-  //                                         ></a>
-  //                                         <button
-  //                                             type="button"
-  //                                             title="Wishlist"
-  //                                             class="far fa-heart"
-  //                                         ></button>
-  //                                     </div>
-  //                                 </div>
-  //                             </div>
-  //                         </div>
-  //                     </div>
-  //                     <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
-  //                         <div class="product-card">
-  //                             <div class="product-media">
-  //                                 <div class="product-img">
-  //                                     <img
-  //                                         src="images/product/15.jpg"
-  //                                         alt="product"
-  //                                     />
-  //                                 </div>
-  //                                 <div class="product-type">
-  //                                     <span class="flat-badge sale">
-  //                                         sale
-  //                                     </span>
-  //                                 </div>
-  //                                 <ul class="product-action">
-  //                                     <li class="view">
-  //                                         <i class="fas fa-eye"></i>
-  //                                         <span>264</span>
-  //                                     </li>
-  //                                     <li class="click">
-  //                                         <i class="fas fa-mouse"></i>
-  //                                         <span>134</span>
-  //                                     </li>
-  //                                     <li class="rating">
-  //                                         <i class="fas fa-star"></i>
-  //                                         <span>4.5/7</span>
-  //                                     </li>
-  //                                 </ul>
-  //                             </div>
-  //                             <div class="product-content">
-  //                                 <ol class="breadcrumb product-category">
-  //                                     <li>
-  //                                         <i class="fas fa-tags"></i>
-  //                                     </li>
-  //                                     <li class="breadcrumb-item">
-  //                                         <a href="#">gadget</a>
-  //                                     </li>
-  //                                     <li
-  //                                         class="breadcrumb-item active"
-  //                                         aria-current="page"
-  //                                     >
-  //                                         camera
-  //                                     </li>
-  //                                 </ol>
-  //                                 <h5 class="product-title">
-  //                                     <a href="ad-details-left.html">
-  //                                         Lorem ipsum dolor sit amet
-  //                                         consect adipisicing elit
-  //                                     </a>
-  //                                 </h5>
-  //                                 <div class="product-meta">
-  //                                     <span>
-  //                                         <i class="fas fa-map-marker-alt"></i>
-  //                                         Uttara, Dhaka
-  //                                     </span>
-  //                                     <span>
-  //                                         <i class="fas fa-clock"></i>30
-  //                                         min ago
-  //                                     </span>
-  //                                 </div>
-  //                                 <div class="product-info">
-  //                                     <h5 class="product-price">
-  //                                         $1200<span>/Negotiable</span>
-  //                                     </h5>
-  //                                     <div class="product-btn">
-  //                                         <a
-  //                                             href="compare.html"
-  //                                             title="Compare"
-  //                                             class="fas fa-compress"
-  //                                         ></a>
-  //                                         <button
-  //                                             type="button"
-  //                                             title="Wishlist"
-  //                                             class="far fa-heart"
-  //                                         ></button>
-  //                                     </div>
-  //                                 </div>
-  //                             </div>
-  //                         </div>
-  //                     </div>
-  //                     <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
-  //                         <div class="product-card">
-  //                             <div class="product-media">
-  //                                 <div class="product-img">
-  //                                     <img
-  //                                         src="images/product/16.jpg"
-  //                                         alt="product"
-  //                                     />
-  //                                 </div>
-  //                                 <div class="product-type">
-  //                                     <span class="flat-badge booking">
-  //                                         booking
-  //                                     </span>
-  //                                 </div>
-  //                                 <ul class="product-action">
-  //                                     <li class="view">
-  //                                         <i class="fas fa-eye"></i>
-  //                                         <span>264</span>
-  //                                     </li>
-  //                                     <li class="click">
-  //                                         <i class="fas fa-mouse"></i>
-  //                                         <span>134</span>
-  //                                     </li>
-  //                                     <li class="rating">
-  //                                         <i class="fas fa-star"></i>
-  //                                         <span>4.5/7</span>
-  //                                     </li>
-  //                                 </ul>
-  //                             </div>
-  //                             <div class="product-content">
-  //                                 <ol class="breadcrumb product-category">
-  //                                     <li>
-  //                                         <i class="fas fa-tags"></i>
-  //                                     </li>
-  //                                     <li class="breadcrumb-item">
-  //                                         <a href="#">luxury</a>
-  //                                     </li>
-  //                                     <li
-  //                                         class="breadcrumb-item active"
-  //                                         aria-current="page"
-  //                                     >
-  //                                         ship
-  //                                     </li>
-  //                                 </ol>
-  //                                 <h5 class="product-title">
-  //                                     <a href="ad-details-left.html">
-  //                                         Lorem ipsum dolor sit amet
-  //                                         consect adipisicing elit
-  //                                     </a>
-  //                                 </h5>
-  //                                 <div class="product-meta">
-  //                                     <span>
-  //                                         <i class="fas fa-map-marker-alt"></i>
-  //                                         Uttara, Dhaka
-  //                                     </span>
-  //                                     <span>
-  //                                         <i class="fas fa-clock"></i>30
-  //                                         min ago
-  //                                     </span>
-  //                                 </div>
-  //                                 <div class="product-info">
-  //                                     <h5 class="product-price">
-  //                                         $1200<span>/per day</span>
-  //                                     </h5>
-  //                                     <div class="product-btn">
-  //                                         <a
-  //                                             href="compare.html"
-  //                                             title="Compare"
-  //                                             class="fas fa-compress"
-  //                                         ></a>
-  //                                         <button
-  //                                             type="button"
-  //                                             title="Wishlist"
-  //                                             class="far fa-heart"
-  //                                         ></button>
-  //                                     </div>
-  //                                 </div>
-  //                             </div>
-  //                         </div>
-  //                     </div>
-  //                     <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
-  //                         <div class="product-card">
-  //                             <div class="product-media">
-  //                                 <div class="product-img">
-  //                                     <img
-  //                                         src="images/product/02.jpg"
-  //                                         alt="product"
-  //                                     />
-  //                                 </div>
-  //                                 <div class="product-type">
-  //                                     <span class="flat-badge sale">
-  //                                         sale
-  //                                     </span>
-  //                                 </div>
-  //                                 <ul class="product-action">
-  //                                     <li class="view">
-  //                                         <i class="fas fa-eye"></i>
-  //                                         <span>264</span>
-  //                                     </li>
-  //                                     <li class="click">
-  //                                         <i class="fas fa-mouse"></i>
-  //                                         <span>134</span>
-  //                                     </li>
-  //                                     <li class="rating">
-  //                                         <i class="fas fa-star"></i>
-  //                                         <span>4.5/7</span>
-  //                                     </li>
-  //                                 </ul>
-  //                             </div>
-  //                             <div class="product-content">
-  //                                 <ol class="breadcrumb product-category">
-  //                                     <li>
-  //                                         <i class="fas fa-tags"></i>
-  //                                     </li>
-  //                                     <li class="breadcrumb-item">
-  //                                         <a href="#">fashion</a>
-  //                                     </li>
-  //                                     <li
-  //                                         class="breadcrumb-item active"
-  //                                         aria-current="page"
-  //                                     >
-  //                                         shoes
-  //                                     </li>
-  //                                 </ol>
-  //                                 <h5 class="product-title">
-  //                                     <a href="ad-details-left.html">
-  //                                         Lorem ipsum dolor sit amet
-  //                                         consect adipisicing elit
-  //                                     </a>
-  //                                 </h5>
-  //                                 <div class="product-meta">
-  //                                     <span>
-  //                                         <i class="fas fa-map-marker-alt"></i>
-  //                                         Uttara, Dhaka
-  //                                     </span>
-  //                                     <span>
-  //                                         <i class="fas fa-clock"></i>30
-  //                                         min ago
-  //                                     </span>
-  //                                 </div>
-  //                                 <div class="product-info">
-  //                                     <h5 class="product-price">
-  //                                         $578<span>/fixed</span>
-  //                                     </h5>
-  //                                     <div class="product-btn">
-  //                                         <a
-  //                                             href="compare.html"
-  //                                             title="Compare"
-  //                                             class="fas fa-compress"
-  //                                         ></a>
-  //                                         <button
-  //                                             type="button"
-  //                                             title="Wishlist"
-  //                                             class="far fa-heart"
-  //                                         ></button>
-  //                                     </div>
-  //                                 </div>
-  //                             </div>
-  //                         </div>
-  //                     </div>
-  //                     <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
-  //                         <div class="product-card">
-  //                             <div class="product-media">
-  //                                 <div class="product-img">
-  //                                     <img
-  //                                         src="images/product/03.jpg"
-  //                                         alt="product"
-  //                                     />
-  //                                 </div>
-  //                                 <div class="product-type">
-  //                                     <span class="flat-badge rent">
-  //                                         rent
-  //                                     </span>
-  //                                 </div>
-  //                                 <ul class="product-action">
-  //                                     <li class="view">
-  //                                         <i class="fas fa-eye"></i>
-  //                                         <span>264</span>
-  //                                     </li>
-  //                                     <li class="click">
-  //                                         <i class="fas fa-mouse"></i>
-  //                                         <span>134</span>
-  //                                     </li>
-  //                                     <li class="rating">
-  //                                         <i class="fas fa-star"></i>
-  //                                         <span>4.5/7</span>
-  //                                     </li>
-  //                                 </ul>
-  //                             </div>
-  //                             <div class="product-content">
-  //                                 <ol class="breadcrumb product-category">
-  //                                     <li>
-  //                                         <i class="fas fa-tags"></i>
-  //                                     </li>
-  //                                     <li class="breadcrumb-item">
-  //                                         <a href="#">education</a>
-  //                                     </li>
-  //                                     <li
-  //                                         class="breadcrumb-item active"
-  //                                         aria-current="page"
-  //                                     >
-  //                                         book
-  //                                     </li>
-  //                                 </ol>
-  //                                 <h5 class="product-title">
-  //                                     <a href="ad-details-left.html">
-  //                                         Lorem ipsum dolor sit amet
-  //                                         consect adipisicing elit
-  //                                     </a>
-  //                                 </h5>
-  //                                 <div class="product-meta">
-  //                                     <span>
-  //                                         <i class="fas fa-map-marker-alt"></i>
-  //                                         Uttara, Dhaka
-  //                                     </span>
-  //                                     <span>
-  //                                         <i class="fas fa-clock"></i>30
-  //                                         min ago
-  //                                     </span>
-  //                                 </div>
-  //                                 <div class="product-info">
-  //                                     <h5 class="product-price">
-  //                                         $57<span>/per week</span>
-  //                                     </h5>
-  //                                     <div class="product-btn">
-  //                                         <a
-  //                                             href="compare.html"
-  //                                             title="Compare"
-  //                                             class="fas fa-compress"
-  //                                         ></a>
-  //                                         <button
-  //                                             type="button"
-  //                                             title="Wishlist"
-  //                                             class="far fa-heart"
-  //                                         ></button>
-  //                                     </div>
-  //                                 </div>
-  //                             </div>
-  //                         </div>
-  //                     </div>
-  //                     <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
-  //                         <div class="product-card">
-  //                             <div class="product-media">
-  //                                 <div class="product-img">
-  //                                     <img
-  //                                         src="images/product/04.jpg"
-  //                                         alt="product"
-  //                                     />
-  //                                 </div>
-  //                                 <div class="product-type">
-  //                                     <span class="flat-badge sale">
-  //                                         sale
-  //                                     </span>
-  //                                 </div>
-  //                                 <ul class="product-action">
-  //                                     <li class="view">
-  //                                         <i class="fas fa-eye"></i>
-  //                                         <span>264</span>
-  //                                     </li>
-  //                                     <li class="click">
-  //                                         <i class="fas fa-mouse"></i>
-  //                                         <span>134</span>
-  //                                     </li>
-  //                                     <li class="rating">
-  //                                         <i class="fas fa-star"></i>
-  //                                         <span>4.5/7</span>
-  //                                     </li>
-  //                                 </ul>
-  //                             </div>
-  //                             <div class="product-content">
-  //                                 <ol class="breadcrumb product-category">
-  //                                     <li>
-  //                                         <i class="fas fa-tags"></i>
-  //                                     </li>
-  //                                     <li class="breadcrumb-item">
-  //                                         <a href="#">electronics</a>
-  //                                     </li>
-  //                                     <li
-  //                                         class="breadcrumb-item active"
-  //                                         aria-current="page"
-  //                                     >
-  //                                         television
-  //                                     </li>
-  //                                 </ol>
-  //                                 <h5 class="product-title">
-  //                                     <a href="ad-details-left.html">
-  //                                         Lorem ipsum dolor sit amet
-  //                                         consect adipisicing elit
-  //                                     </a>
-  //                                 </h5>
-  //                                 <div class="product-meta">
-  //                                     <span>
-  //                                         <i class="fas fa-map-marker-alt"></i>
-  //                                         Uttara, Dhaka
-  //                                     </span>
-  //                                     <span>
-  //                                         <i class="fas fa-clock"></i>30
-  //                                         min ago
-  //                                     </span>
-  //                                 </div>
-  //                                 <div class="product-info">
-  //                                     <h5 class="product-price">
-  //                                         $246<span>/Negotiable</span>
-  //                                     </h5>
-  //                                     <div class="product-btn">
-  //                                         <a
-  //                                             href="compare.html"
-  //                                             title="Compare"
-  //                                             class="fas fa-compress"
-  //                                         ></a>
-  //                                         <button
-  //                                             type="button"
-  //                                             title="Wishlist"
-  //                                             class="far fa-heart"
-  //                                         ></button>
-  //                                     </div>
-  //                                 </div>
-  //                             </div>
-  //                         </div>
-  //                     </div>
-  //                     <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
-  //                         <div class="product-card">
-  //                             <div class="product-media">
-  //                                 <div class="product-img">
-  //                                     <img
-  //                                         src="images/product/05.jpg"
-  //                                         alt="product"
-  //                                     />
-  //                                 </div>
-  //                                 <div class="product-type">
-  //                                     <span class="flat-badge sale">
-  //                                         sale
-  //                                     </span>
-  //                                 </div>
-  //                                 <ul class="product-action">
-  //                                     <li class="view">
-  //                                         <i class="fas fa-eye"></i>
-  //                                         <span>264</span>
-  //                                     </li>
-  //                                     <li class="click">
-  //                                         <i class="fas fa-mouse"></i>
-  //                                         <span>134</span>
-  //                                     </li>
-  //                                     <li class="rating">
-  //                                         <i class="fas fa-star"></i>
-  //                                         <span>4.5/7</span>
-  //                                     </li>
-  //                                 </ul>
-  //                             </div>
-  //                             <div class="product-content">
-  //                                 <ol class="breadcrumb product-category">
-  //                                     <li>
-  //                                         <i class="fas fa-tags"></i>
-  //                                     </li>
-  //                                     <li class="breadcrumb-item">
-  //                                         <a href="#">gadgets</a>
-  //                                     </li>
-  //                                     <li
-  //                                         class="breadcrumb-item active"
-  //                                         aria-current="page"
-  //                                     >
-  //                                         headphone
-  //                                     </li>
-  //                                 </ol>
-  //                                 <h5 class="product-title">
-  //                                     <a href="ad-details-left.html">
-  //                                         Lorem ipsum dolor sit amet
-  //                                         consect adipisicing elit
-  //                                     </a>
-  //                                 </h5>
-  //                                 <div class="product-meta">
-  //                                     <span>
-  //                                         <i class="fas fa-map-marker-alt"></i>
-  //                                         Uttara, Dhaka
-  //                                     </span>
-  //                                     <span>
-  //                                         <i class="fas fa-clock"></i>30
-  //                                         min ago
-  //                                     </span>
-  //                                 </div>
-  //                                 <div class="product-info">
-  //                                     <h5 class="product-price">
-  //                                         $723<span>/fixed</span>
-  //                                     </h5>
-  //                                     <div class="product-btn">
-  //                                         <a
-  //                                             href="compare.html"
-  //                                             title="Compare"
-  //                                             class="fas fa-compress"
-  //                                         ></a>
-  //                                         <button
-  //                                             type="button"
-  //                                             title="Wishlist"
-  //                                             class="far fa-heart"
-  //                                         ></button>
-  //                                     </div>
-  //                                 </div>
-  //                             </div>
-  //                         </div>
-  //                     </div>
-  //                     <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
-  //                         <div class="product-card">
-  //                             <div class="product-media">
-  //                                 <div class="product-img">
-  //                                     <img
-  //                                         src="images/product/06.jpg"
-  //                                         alt="product"
-  //                                     />
-  //                                 </div>
-  //                                 <div class="product-type">
-  //                                     <span class="flat-badge rent">
-  //                                         rent
-  //                                     </span>
-  //                                 </div>
-  //                                 <ul class="product-action">
-  //                                     <li class="view">
-  //                                         <i class="fas fa-eye"></i>
-  //                                         <span>264</span>
-  //                                     </li>
-  //                                     <li class="click">
-  //                                         <i class="fas fa-mouse"></i>
-  //                                         <span>134</span>
-  //                                     </li>
-  //                                     <li class="rating">
-  //                                         <i class="fas fa-star"></i>
-  //                                         <span>4.5/7</span>
-  //                                     </li>
-  //                                 </ul>
-  //                             </div>
-  //                             <div class="product-content">
-  //                                 <ol class="breadcrumb product-category">
-  //                                     <li>
-  //                                         <i class="fas fa-tags"></i>
-  //                                     </li>
-  //                                     <li class="breadcrumb-item">
-  //                                         <a href="#">automobiles</a>
-  //                                     </li>
-  //                                     <li
-  //                                         class="breadcrumb-item active"
-  //                                         aria-current="page"
-  //                                     >
-  //                                         by cycle
-  //                                     </li>
-  //                                 </ol>
-  //                                 <h5 class="product-title">
-  //                                     <a href="ad-details-left.html">
-  //                                         Lorem ipsum dolor sit amet
-  //                                         consect adipisicing elit
-  //                                     </a>
-  //                                 </h5>
-  //                                 <div class="product-meta">
-  //                                     <span>
-  //                                         <i class="fas fa-map-marker-alt"></i>
-  //                                         Uttara, Dhaka
-  //                                     </span>
-  //                                     <span>
-  //                                         <i class="fas fa-clock"></i>30
-  //                                         min ago
-  //                                     </span>
-  //                                 </div>
-  //                                 <div class="product-info">
-  //                                     <h5 class="product-price">
-  //                                         $35<span>/per hour</span>
-  //                                     </h5>
-  //                                     <div class="product-btn">
-  //                                         <a
-  //                                             href="compare.html"
-  //                                             title="Compare"
-  //                                             class="fas fa-compress"
-  //                                         ></a>
-  //                                         <button
-  //                                             type="button"
-  //                                             title="Wishlist"
-  //                                             class="far fa-heart"
-  //                                         ></button>
-  //                                     </div>
-  //                                 </div>
-  //                             </div>
-  //                         </div>
-  //                     </div>
-  //                     <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
-  //                         <div class="product-card">
-  //                             <div class="product-media">
-  //                                 <div class="product-img">
-  //                                     <img
-  //                                         src="images/product/01.jpg"
-  //                                         alt="product"
-  //                                     />
-  //                                 </div>
-  //                                 <div class="product-type">
-  //                                     <span class="flat-badge booking">
-  //                                         booking
-  //                                     </span>
-  //                                 </div>
-  //                                 <ul class="product-action">
-  //                                     <li class="view">
-  //                                         <i class="fas fa-eye"></i>
-  //                                         <span>264</span>
-  //                                     </li>
-  //                                     <li class="click">
-  //                                         <i class="fas fa-mouse"></i>
-  //                                         <span>134</span>
-  //                                     </li>
-  //                                     <li class="rating">
-  //                                         <i class="fas fa-star"></i>
-  //                                         <span>4.5/7</span>
-  //                                     </li>
-  //                                 </ul>
-  //                             </div>
-  //                             <div class="product-content">
-  //                                 <ol class="breadcrumb product-category">
-  //                                     <li>
-  //                                         <i class="fas fa-tags"></i>
-  //                                     </li>
-  //                                     <li class="breadcrumb-item">
-  //                                         <a href="#">properties</a>
-  //                                     </li>
-  //                                     <li
-  //                                         class="breadcrumb-item active"
-  //                                         aria-current="page"
-  //                                     >
-  //                                         house
-  //                                     </li>
-  //                                 </ol>
-  //                                 <h5 class="product-title">
-  //                                     <a href="ad-details-left.html">
-  //                                         Lorem ipsum dolor sit amet
-  //                                         consect adipisicing elit
-  //                                     </a>
-  //                                 </h5>
-  //                                 <div class="product-meta">
-  //                                     <span>
-  //                                         <i class="fas fa-map-marker-alt"></i>
-  //                                         Uttara, Dhaka
-  //                                     </span>
-  //                                     <span>
-  //                                         <i class="fas fa-clock"></i>30
-  //                                         min ago
-  //                                     </span>
-  //                                 </div>
-  //                                 <div class="product-info">
-  //                                     <h5 class="product-price">
-  //                                         $234<span>/per month</span>
-  //                                     </h5>
-  //                                     <div class="product-btn">
-  //                                         <a
-  //                                             href="compare.html"
-  //                                             title="Compare"
-  //                                             class="fas fa-compress"
-  //                                         ></a>
-  //                                         <button
-  //                                             type="button"
-  //                                             title="Wishlist"
-  //                                             class="far fa-heart"
-  //                                         ></button>
-  //                                     </div>
-  //                                 </div>
-  //                             </div>
-  //                         </div>
-  //                     </div>
-  //                 </div>
-  //                 <div class="row">
-  //                     <div class="col-lg-12">
-  //                         <div class="footer-pagection">
-  //                             <p class="page-info">
-  //                                 Showing 12 of 60 Results
-  //                             </p>
-  //                             <ul class="pagination">
-  //                                 <li class="page-item">
-  //                                     <a class="page-link" href="#">
-  //                                         <i class="fas fa-long-arrow-alt-left"></i>
-  //                                     </a>
-  //                                 </li>
-  //                                 <li class="page-item">
-  //                                     <a
-  //                                         class="page-link active"
-  //                                         href="#"
-  //                                     >
-  //                                         1
-  //                                     </a>
-  //                                 </li>
-  //                                 <li class="page-item">
-  //                                     <a class="page-link" href="#">
-  //                                         2
-  //                                     </a>
-  //                                 </li>
-  //                                 <li class="page-item">
-  //                                     <a class="page-link" href="#">
-  //                                         3
-  //                                     </a>
-  //                                 </li>
-  //                                 <li class="page-item">...</li>
-  //                                 <li class="page-item">
-  //                                     <a class="page-link" href="#">
-  //                                         67
-  //                                     </a>
-  //                                 </li>
-  //                                 <li class="page-item">
-  //                                     <a class="page-link" href="#">
-  //                                         <i class="fas fa-long-arrow-alt-right"></i>
-  //                                     </a>
-  //                                 </li>
-  //                             </ul>
-  //                         </div>
-  //                     </div>
-  //                 </div>
-  //             </div>
-  //         </div>
-  //     </div>
-  // </section>
-  ;
+  });
 }
-
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);
 if (document.getElementById("app")) {
-  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(App, {}), document.getElementById("app"));
+  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(App, {}), document.getElementById("app"));
 }
 
 /***/ }),
@@ -11197,18 +9702,30 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/dist/index.js");
 /* harmony import */ var _public_user_images_job_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../public/user/images/job.jpg */ "./public/user/images/job.jpg");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 
 
+
 var MappingComponent = function MappingComponent(_ref) {
   var listings = _ref.listings;
+  var navigate = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_3__.useNavigate)();
+  var viewDetails = function viewDetails(id) {
+    navigate("/job/" + id);
+  };
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     children: listings.length > 0 && listings.map(function (list, i) {
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
         className: "col-sm-6 col-md-6 col-lg-6 col-xl-4",
+        style: {
+          cursor: 'pointer'
+        },
+        onClick: function onClick() {
+          return viewDetails(list.id);
+        },
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
           className: "product-card",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
@@ -12118,6 +10635,117 @@ var Home = function Home() {
   });
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Home);
+
+/***/ }),
+
+/***/ "./resources/js/pages/JobDetails/Details.jsx":
+/*!***************************************************!*\
+  !*** ./resources/js/pages/JobDetails/Details.jsx ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _layouts_Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../layouts/Header */ "./resources/js/layouts/Header.jsx");
+/* harmony import */ var _public_images_job_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../public/images/job.jpg */ "./public/images/job.jpg");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/dist/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i["return"] && (_r = _i["return"](), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+var Details = function Details() {
+  var token = localStorage.getItem("loginToken");
+  var _useParams = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_4__.useParams)(),
+    id = _useParams.id;
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({}),
+    _useState2 = _slicedToArray(_useState, 2),
+    details = _useState2[0],
+    setDetails = _useState2[1];
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    axios.get("/api/job/" + id, {
+      headers: {
+        "Authorization": 'Bearer ' + token
+      }
+    }).then(function (res) {
+      setDetails(res.data.data);
+    });
+  }, []);
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_layouts_Header__WEBPACK_IMPORTED_MODULE_1__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("section", {
+      "class": "blog-details-part",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        "class": "container",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+          "class": "row",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+            "class": "col-lg-10 m-auto",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+              "class": "blog-details-title",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h2", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("a", {
+                  href: "#",
+                  children: "Lorem ipsum dolor sit amet consectetur adipisicing elit maxime tempore natus laborum autem."
+                })
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+              "class": "blog-details-image",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
+                style: {
+                  width: "300px"
+                },
+                src: _public_images_job_jpg__WEBPACK_IMPORTED_MODULE_2__["default"],
+                alt: "blog-details"
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+              "class": "blog-details-content",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+                "class": "description",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+                  children: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore incidunt harum ea a dolorem neque labore animi? Asperiores necessitatibus voluptate ut iure alias, odit animi consequuntur fugiat esse atque sit aut reprehenderit mollitia dignissimos quasi vel quo neque eaque voluptates provident qui. At, debitis corporis. Asperiores quod, dolorum earum sunt eveniet dolores similique amet? Neque vel dolores quasi reiciendis rem dicta amet, ab tempore? Porro quos, alias nisi adipisci sed et architecto quis ipsam minus sint! Consequuntur minima excepturi dolor, nostrum dolore asperiores, atque laudantium magnam consequatur pariatur porro repellendus Perspiciatis labore libero quibusdam nobis dicta eum ipsam enim nisi."
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+                "class": "sub-content",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h4", {
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("b", {
+                    children: "JOB DETAILS"
+                  })
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+                  children: details.job_title
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+                  children: details.seniority_level
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+                  children: details.skill
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+                  children: details.salary
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+                  children: details.company_size
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+                  children: details.city
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+                  children: details.country
+                })]
+              })]
+            })]
+          })
+        })
+      })
+    })]
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Details);
 
 /***/ }),
 
@@ -17348,6 +15976,21 @@ defineJQueryPlugin(Toast);
 
 //# sourceMappingURL=bootstrap.esm.js.map
 
+
+/***/ }),
+
+/***/ "./public/images/job.jpg":
+/*!*******************************!*\
+  !*** ./public/images/job.jpg ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/job.jpg?a69f552b6a086d0179f27e52d08e4002");
 
 /***/ }),
 

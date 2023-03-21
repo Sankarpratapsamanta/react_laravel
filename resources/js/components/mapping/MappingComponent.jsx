@@ -1,12 +1,17 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import jobImage from "../../../../public/user/images/job.jpg"
 
 const MappingComponent=({listings})=>{
+    const navigate = useNavigate();
+    const viewDetails=(id)=>{
+        navigate("/job/"+id)
+    }
     return (
         <React.Fragment>
             {(listings.length > 0 && 
                 listings.map((list,i)=>(
-                    <div key={i} className="col-sm-6 col-md-6 col-lg-6 col-xl-4">
+                    <div key={i} className="col-sm-6 col-md-6 col-lg-6 col-xl-4" style={{cursor:'pointer'}} onClick={()=>viewDetails(list.id)}>
                         <div className="product-card">
                             <div className="product-media">
                                 <div className="product-img">
